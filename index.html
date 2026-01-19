@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parlar Ioniâno - LinguApp</title>
+    <style>
+        :root {
+            --ionian-blue: #1a5695;
+            --ionian-gold: #f2b82e;
+            --white: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-container {
+            width: 90%;
+            max-width: 400px;
+            background: var(--white);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 5px solid var(--ionian-gold);
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            color: var(--ionian-blue);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            background-color: var(--ionian-blue);
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(26, 86, 149, 0.3);
+        }
+
+        .menu-button:hover {
+            background-color: #144476;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 86, 149, 0.4);
+        }
+
+        .menu-button:active {
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container fade-in">
+        <img src="https://files.oaiusercontent.com/file-jT8p0rMAnVn7vjR8P3H7Vz?se=2026-01-19T11%3A11%3A40Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3DBook%2520cover.jpg&sig=v2t1DlyfI%2BX9p5P7p9/V88z7n/rXv7u/8UeE6W%2B4P0M%3D" 
+             alt="Parlar Ioniâno" 
+             class="hero-image">
+        
+        <div class="content">
+            <h1>Benvenuti!</h1>
+            <p>Ready to master the Ionian language?</p>
+            
+            <button id="startBtn" class="menu-button">Apri LinguApp</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('startBtn').addEventListener('click', function() {
+            // Adding a small delay for haptic feel/animation
+            this.innerText = "Caricamento...";
+            setTimeout(() => {
+                window.location.href = "https://alessio2002.github.io/LinguApp/";
+            }, 300);
+        });
+    </script>
+</body>
+</html>
