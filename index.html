@@ -17,11 +17,16 @@
             padding: 0;
             height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Photo moved to background here */
+            
+            /* Photo moved to background */
             background-image: url('https://raw.githubusercontent.com/Alessio2002/LinguApp-main-menu/main/Book%20cover.jpg');
+            
+            /* Fixes the "weird" stretching and repeating */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed; /* Keeps the image from moving when scrolling */
+            
             display: flex;
             justify-content: center;
             align-items: center;
