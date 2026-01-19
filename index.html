@@ -9,27 +9,24 @@
             --ionian-blue: #1a5695;
             --ionian-gold: #f2b82e;
             --white: #ffffff;
-            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            
-            /* Photo moved to background */
-            background-image: url('https://raw.githubusercontent.com/Alessio2002/LinguApp-main-menu/main/Book%20cover.jpg');
-            
-            /* Fixes the "weird" stretching and repeating */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps the image from moving when scrolling */
-            
             display: flex;
             justify-content: center;
             align-items: center;
+            
+            /* BACKGROUND FIX:*/
+            background-image: url('https://raw.githubusercontent.com/Alessio2002/LinguApp-main-menu/main/Book%20cover.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--ionian-blue); /* Fallback colour */
         }
 
         .app-container {
@@ -37,7 +34,7 @@
             max-width: 400px;
             background: var(--white);
             border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             overflow: hidden;
             text-align: center;
             padding-bottom: 40px;
@@ -79,11 +76,6 @@
         .menu-button:hover {
             background-color: #144476;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 86, 149, 0.4);
-        }
-
-        .menu-button:active {
-            transform: translateY(0);
         }
 
         /* Loading Animation */
@@ -102,7 +94,7 @@
     <div class="app-container fade-in">
         <div class="content">
             <h1>Benvenudi!</h1>
-            <p>Ready to master the an language?</p>
+            <p>Ready to master the Ionian language?</p>
             
             <button id="startBtn" class="menu-button">Apri linguApp</button>
         </div>
@@ -110,7 +102,7 @@
 
     <script>
         document.getElementById('startBtn').addEventListener('click', function() {
-            // Adding a small delay for haptic feel/animation
+            // Updated spelling to Carricamento as per your code
             this.innerText = "Carricamento...";
             setTimeout(() => {
                 window.location.href = "https://alessio2002.github.io/LinguApp/";
